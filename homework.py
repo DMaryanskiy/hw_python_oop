@@ -60,7 +60,6 @@ class CashCalculator(Calculator):
             return f'Денег нет, держись: твой долг - {round(((self.get_today_stats() - self.limit)/self.course), 2)} {self.currency}'
     
     def get_today_cash_remained(self, currency): #функция подсчета оставшегося количества денег в нужной валюте
-        self.currency = currency
         if currency == "rub":
             return self.limiter()
         elif currency == 'usd':
